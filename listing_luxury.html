@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Thank you app</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-database.js"></script>
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCTbwQkt7mZkSszvlzWMIKzMm8WqY2Yf58",
+    authDomain: "swifty-pickup.firebaseapp.com",
+    databaseURL: "https://swifty-pickup.firebaseio.com",
+    projectId: "swifty-pickup",
+    storageBucket: "swifty-pickup.appspot.com",
+    messagingSenderId: "22011268387",
+    appId: "1:22011268387:web:ed1d60408f311625"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+    </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="listing_suv.html">Our Cars </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-lg-3">
+
+          <h1 class="my-4">Swifty's Garage</h1>
+          <div class="list-group">
+            <a href="listing_suv.html" class="list-group-item">SUV</a>
+            <a href="listing_sedan.html" class="list-group-item">SEDAN</a>
+            <a href="listing_luxury.html" class="list-group-item">LUXURY</a>
+          </div>
+
+        </div>
+        <!-- /.col-lg-3 -->
+
+        <div class="col-lg-9">
+
+
+
+          <div class="row">
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+                <a href="#"><img class="card-img-top" src="img/lux1-1.jpg" alt=""></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a href="carpage.html">2019 Mercedes-Benz A-class</a>
+                  </h4>
+                  <h5>$1550.99</h5>
+                  <p class="card-text">One of the first things we were told during the briefing for the new Mercedes-Benz A-class sedan is that there are four ways to interact with it.</p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+                <a href="#"><img class="card-img-top" src="img/lux2-1.jpg" alt=""></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a href="#">2019 BMW Z4</a>
+                  </h4>
+                  <h5>$550.99</h5>
+                  <p class="card-text">Some sports cars are bought to be driven, and—let's be honest here—some are bought to be flaunted. </p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+                <a href="#"><img class="card-img-top" src="img/lux3-1.jpg" alt=""></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a href="#">2017 Bugatti Chiron</a>
+                  </h4>
+                  <h5>$3000.99</h5>
+                  <p class="card-text">If there’s any doubt about the Bugatti Chiron’s raison d’être, it’s written right on the steering wheel, on a large blue button emblazoned with one word: ENGINE. Sure, we could wax poetic about the marriage of modern technology to the ancient human craving to express vanity and wealth. </p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+                <a href="#"><img class="card-img-top" src="img/lux4.jpg" alt=""></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a href="#">Lamborghini Aventador</a>
+                  </h4>
+                  <h5>$700.99</h5>
+                  <p class="card-text">Lamborghini's Miura, the first mid-engined supercar, was a true pioneer. But in the years that followed, the company found its groove with a dynasty that prioritized theater over handling dynamics.</p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+                <a href="#"><img class="card-img-top" src="img/lux5.jpg" alt=""></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a href="#">2019 Porsche Panamera GTS </a>
+                  </h4>
+                  <h5>$210.99</h5>
+                  <p class="card-text">Porsche's second-generation Panamera, in both four-door hatchback and Sport Turismo sport-wagon guises, is a big, heavy car that excels at outsize performance, regardless of its state of tune. </p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+                <a href="#"><img class="card-img-top" src="img/lux6.jpg" alt=""></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a href="#">2017 McLaren 570GT</a>
+                  </h4>
+                  <h5>$350.99</h5>
+                  <p class="card-text">An entire industry has emerged to tell rich people what luxury is—and how they can spend more of their money on it. </p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- /.row -->
+
+        </div>
+        <!-- /.col-lg-9 -->
+
+      </div>
+      <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Swifty Pick up 2018</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    				<!-- navigation / menu -->
+    <div id="container">
+    
+        <div class="header-background">
+
+        <header>
+        <div class="container">
+          <h1 class="logo"></h1>
+
+          <nav>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="listing_sedan.html">Our Cars</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+            
+  </body>
+
+</html>

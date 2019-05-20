@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Thank you app</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-database.js"></script>
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCTbwQkt7mZkSszvlzWMIKzMm8WqY2Yf58",
+    authDomain: "swifty-pickup.firebaseapp.com",
+    databaseURL: "https://swifty-pickup.firebaseio.com",
+    projectId: "swifty-pickup",
+    storageBucket: "swifty-pickup.appspot.com",
+    messagingSenderId: "22011268387",
+    appId: "1:22011268387:web:ed1d60408f311625"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+
+    				<!-- navigation / menu -->
+    <div id="container">
+    
+        <div class="header-background">
+
+        <header>
+        <div class="container">
+          <h1 class="logo"></h1>
+
+          <nav>
+            <ul>
+                <li><h1 class="my-4">Swifty Pickup</h1></li>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="listing_sedan.html">Our Cars</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+            
+</head>
+<body>
+  <div id="container">
+		<!-- title / logo -->
+		<div id="title">
+			<a href="index.html"><img src="image/logo3.png"></a>
+		</div>
+		
+		<!-- user info -->
+		<div id="user-info">
+			<div id="display-name"></div>
+        <button type="submit" class="logout">Log Out</button>
+
+		</div>
+		
+		<!-- login form-->
+		<div id="login">
+		<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+        <div id="id01" class="modal">
+        <form class="modal-content animate" action="#">
+            <div class="imgcontainer">
+              <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>           <div class="container">
+              <label for="uname"><b>Username</b></label>
+              <input type="text" placeholder="Enter Username" name="uname" required>
+
+              <label for="psw"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="psw" required>
+
+              <button type="submit">Login</button>
+              <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+              </label>
+            </div>
+          </form>
+        </div>
+<!--
+			<input type="text" id="login-email" placeholder="Email">
+			<input type="password" id="login-password" placeholder="Password">
+			<button id="submit-login">Login</button>
+-->
+		</div>
+		
+		<!-- sign up form-->
+		<div id="sign-up">        <div id="id02" class="modal2">
+          <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+          <form class="modal-content" action="#">
+            <div class="container">
+              <h1>Sign Up</h1>
+              <p>To create an account, fill in the bottom.</p>
+              <hr>
+              <label for="username"><b>Username</b></label>
+              <input type="text" placeholder="Enter Username" name="username" required>
+              <label for="email"><b>Email</b></label>
+              <input type="text" placeholder="Enter Email" name="email" required>
+
+              <label for="psw"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="psw" required>
+              <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+              <div class="clearfix">
+                <button type="submit" class="signupbtn">Sign Up</button>
+              </div>
+              </div>
+          </form>
+        </div>
+<!--
+			<input type="text" id="sign-up-username" placeholder="Username">
+			<input type="email" id="sign-up-email" placeholder="Email">
+			<input type="password" id="sign-up-password" placeholder="Password">
+			<button id="submit-sign-up">Sign Up</button>
+-->
+			<!--<p id="signup-response"></p>-->
+		</div>
+     
+      
+      <!-- section main text -->
+      <div id="main">
+    <!-- Content section -->
+    <section class="py-5">
+      <div class="container">
+        <h1>About Our Company</h1>
+          
+        <p class="lead">We’re how you get there.<br> Where you go is up to you.</p>
+          <p>Swifty pick up is carsharing wherever you want, whenever you need, without the costs or hassles of owning a luxery car, or dealing with car rental lines, offices, or strict reservation times.</p>
+        
+            <p>
+            At less than $0.50 per minute and without parking charges, fuel costs, or additional insurance, your only question should be: <br> “Where to next?” <br> Get going.
+           
+            </p>
+      </div>
+        
+        <img src="img/secondrow.jpg" class="img-fluid" alt="Responsive image" >
+        
+    </section>
+
+    <!-- Image Section - Second background image for the header in the line below -->
+   
+
+    <!-- Content section -->
+    <section class="py-0">
+      <div class="container">
+        <h1>HOW IT WORKS</h1>
+        <p class="lead">Grab any available car</p>
+        <p>Cars are available on the street and in designated lots around the city. A live map is available on our app.</p>
+          
+        <p class="lead">Point A, meet Point B</p>
+        <p>You can hop in a car whenever, wherever (with no reservations required) and leave it in the Home Area (operating area) - no need to return it where you grabbed it from.</p>  
+          
+        <p class="lead">Park and go</p>
+        <p>Where you go in between starting and stopping is your adventure. Done with your trip? Park in any approved legal spot and go - no need to refuel.</p>  
+      </div>    <script src="js/auth.js"></script>
+	<script src="js/post.js"></script> <!--creating a post -->
+	<script src="js/create-post.js"></script>
+	<script src="js/posts.js"></script> 
+    <img src="img/backimg3-2.jpg" class="img-fluid" alt="Responsive image" >    
+    </section>
+    
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Swifty pick up 2018</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+		
+  
+    <div id="banner2">
+            <img src="image/reviews.png">
+        </div> 
+  
+       
+       <div id="banner3">
+              <img src="image/footer.png"> 
+       </div>
+    </div> 
+   
+   
+    <script src="js/auth.js"></script>
+	<script src="js/post.js"></script> <!--creating a post -->
+	<script src="js/create-post.js"></script>
+	<script src="js/posts.js"></script> 
+	
+</script> 
+</body>
+</html>
